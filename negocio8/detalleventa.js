@@ -6,8 +6,8 @@ function detalleventa()
                 if (productos == "producto"){
                     alert("no ha seleccionado producto")
                 } else {
-                if (productos == "producto"){
-                    alert("no ha seleccionado producto")
+                if (ventas == "venta"){
+                    alert("no ha seleccionado venta")
                 } else {
                     if (cantidad<1 || cantidad>1001){
                         alert("ingrese una cantidad valida")
