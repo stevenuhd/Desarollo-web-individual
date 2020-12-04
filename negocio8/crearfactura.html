@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crear factura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+   
+   <style>
+        input.error,
+        select.error,
+        textarea.error {
+            border: 3px solid red;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#form1").validate({
+                rules: {
+                    fact: {
+                        required: true,
+                        min: 1,
+                        max: 10000
+                    },
+                    vent: {
+                        required: true,
+                        min: 1,
+                        max: 1000
+                    },
+                    gener: {
+                        required: true
+                    },
+                    pago: {
+                        required: true
+                    }
+                },
+                messages: {
+                    fact: {
+                        required: "Ingrese el ID de factura",
+                        min: "Debe ser un número mayor o igual a 1",
+                        max: "Debe ser un número menor a 10000"
+                    },
+                    vent: {
+                        required: "Ingrese el ID de venta",
+                        min: "Debe ser un número mayor o igual a 1",
+                        max: "Debe ser un número menor a 1000"
+                    },
+                    gener: {
+                        required: "Debe indicar una fecha de generación"
+                    },
+                    pago: {
+                        required: "Debe indicar una fecha de pago"
+                    }
+                }
+            });
+
+            $("#gener").datepicker(
+                { dateFormat: "yy-mm-dd" }
+            );
+             $("#pago").datepicker(
+                { dateFormat: "yy-mm-dd" }
+                
+            );
+
+        });
+    </script>
+    <script>
+$(function () {
+$('#num').keydown(function (e) {
+if (e.shiftKey || e.ctrlKey || e.altKey) {
+e.preventDefault();
+} else {
+var key = e.keyCode;
+//alert(key)
+if (!((key == 8) || (key == 46) ||
+(key >= 35 && key <= 40) || (key>= 48 && key <= 57) || (key>= 96 && key <= 105))) { e.preventDefault(); } } }); });
+            </script>
+  </script>
+
+
+</head>
+<body>
+<h1>Agregar Factura</h1>
+<form id="form1">
+
+    <label for="no">Id de factura</label><br>
+    <input type="text" name="fact" id="fact"><br>
+    <br>
+    <label for="no">Id de venta</label><br>
+    <input type="text" name="vent" id="vent"><br>
+    <br>
+    <label for="ap">Fecha de generacion</label><br>
+    <input type="text" name="gener" id="gener"><br>
+    <br>
+    <label for="ap">Fecha de pago</label><br>
+    <input type="text" name="pago" id="pago"><br>
+    <br>
+    <div class="num" id="num">
+    <label for="ap">Subtotal</label><br>
+    <input type="text" name="sub" id="sub"><br>
+    <br>
+    <label for="ap">Impuesto</label><br>
+    <input type="text" name="imp" id="imp"><br>
+    <br>
+    <label for="ap">Total</label><br>
+    <input type="text" name="total" id="total"><br>
+    <br>
+    </div>
+    <input type="submit" value="Validar">
+    <input type="button" name="Submit" value="Limpiar" onClick="location.reload()"><br>
+    <br>
+    <a href="negocio.html">Volver</a>
+</form>
+
+</body>
+</html>

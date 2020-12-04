@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Ventas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="listavent.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">   
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<script>
+
+        $(document).ready(function () {
+            $('#tablacute').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/Spanish.json'
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <h1>Registro de ventas</h1>
+    </header>
+    <table class="display" id="tablacute" border="1" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>ID Venta</th>
+                <th>Nombre Vendedor</th>
+                <th>Sub Total</th>
+                <th>Impuesto</th>
+                <th>Total</th>
+                <th>Agregar Productos</th>
+                <th>Eliminar Venta</th>
+        </thead>
+        </tr>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Antonio Margarette</td>
+                <td>60000</td>
+                <td>1000</td>
+                <td>61000</td>
+                <td>
+                    <form action="agregarventa.html">
+                        <input type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button onclick="listavent();">Eliminar Venta</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mike mo capaldi</td>
+                <td>50000</td>
+                <td>1000</td>
+                <td>31000</td>
+
+                <td>
+                    <form action="agregarventa.html">
+                        <input type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button onclick="listavent();">Eliminar Venta</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dominic Dicoco</td>
+                <td>80000</td>
+                <td>2000</td>
+                <td>82000</td>
+
+                <td>
+                    <form action="agregarventa.html">
+                        <input type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button onclick="listavent();">Eliminar Venta</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Aldo de apache</td>
+                <td>90000</td>
+                <td>3000</td>
+                <td>93000</td>
+
+                <td>
+                    <form action="agregarventa.html">
+                        <input type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button onclick="listavent();">Eliminar Venta</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Hans Landa</td>
+                <td>40000</td>
+                <td>4000</td>
+                <td>44000</td>
+
+                <td>
+                    <form action="agregarventa.html">
+                        <input type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button onclick="listavent();">Eliminar Venta</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table><br>
+    <a href="Negocio.html" title="" Inicio>Inicio</a></li>
+
+
+
+</body>
+
+</html>

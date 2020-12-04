@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agregar venta</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='agventa.js'></script>
+
+
+</head>
+
+<body>
+<div class="form1">
+    <h1>Agregar venta</h1>
+    <form name= name="form2" onsubmit="return agventa()">
+
+        <label for="no">Id de la venta</label><br>
+        <input type="text" name="idvent" id="idvent"><br>
+        <br>
+        <label for="no">Nombre Vendedor</label><br>
+        <input type="text" name="Nombres" id="nombrev"><br>
+        <br>
+        <label for="ap">Cantidad de articulos</label><br>
+        <input type="text" name="cantart" id="cant"><br>
+        <br>
+<input type="button" onclick= "agventa();"  value="agregar">
+<input type="button" name="Submit" value="Limpiar" onClick="location.reload()"><br>
+<br>
+<a href="negocio.html">Volver</a>
+        </form>
+        <br>
+    <div id="mensaje"></div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

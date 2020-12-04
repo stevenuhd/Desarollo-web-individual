@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle venta</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="detalleventa.js"></script>
+</head>
+<body>
+    <div class="form" id="list" >
+        <h1>Agregar detalle venta</h1>
+        <form name=name="form2" id="lista" onsubmit="return agventa()">
+    
+            <label for="no">Venta</label><br>
+            <select name = "venta" id = "venta">
+                <option value="venta">-</option>
+                <option value="001 / ">001</option>
+                <option value="002 / ">002</option>
+                <option value="003 / ">003</option>
+                <option value="004 / ">004</option>
+                <option value="005 / ">005</option>
+                <option value="006 / ">006</option>
+            </select><br>
+            <br>
+            <label for="no">Producto</label><br>
+                <select name = "producto" id="producto">
+                    <option value="producto">-</option>
+                    <option value="Pisco Sour">Pisco Sour</option>
+                    <option value="Cerveza">Cerveza</option>
+                    <option value="Licor">Licor</option>
+                    <option value="Pisco">Pisco</option>
+                    <option value="Bourbon">Bourbon</option>
+                    <option value="whisky">whisky</option>
+                </select><br>
+            <br>
+            <label for="cant">Cantidad</label><br>
+            <input type="number" name="cantidad" id="cantidad" placeholder="N° de articulos"><br>
+            <br>
+            <input type="button" onclick="detalleventa();" value="Procesar">
+            <input type="button" name="Submit" value="Limpiar" onClick="location.reload()"><br>
+            <br>
+            <a href="negocio.html">Volver</a><br>
+        </form>
+      
+
+        <Div>
+            <ul id="demo">
+        
+        
+            </ul>
+    
+</body>
+</html>

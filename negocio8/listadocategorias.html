@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>listado categorias</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <center>
+    <script>
+          $(function () {
+                $("#tamano").resizable();
+            });
+     
+        $(function () {
+            $("#accordion").accordion();
+            width: '40%'
+        });
+
+        $(function () {
+                $("#list").dialog({
+                    autoOpen: false,
+                    show: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    hide: {
+                        effect: "explode",
+                        duration: 1000
+                    }
+                });
+
+                $("#boton").on("click", function () {
+                    $("#list").dialog("open");
+                });
+            });
+
+       
+    </script>
+    
+</head>
+
+<body style="width: 60%">
+    <div id="tamano2">
+<textarea id="tamano" class="ui-widget-header">Categoria de productos</textarea>
+</div>
+<br>
+    <div id="accordion">
+        <h3>Cervezas</h3>
+        <div>
+            <p>
+            Tenemos cervezas como "Snow" la número uno en la lista de cervezas más vendidas en el mundo, que acapara el 5,4% del mercado mundial, a
+            pesar que prácticamente solo se vende en China, la tenemos en nuestro bar. Ademas contamos con otras marcas como: Tsingtao,Bud Light,
+            Budweiser,Skol,Yanjing,Heineken y Harbin.
+          
+            </p>
+        </div>
+        <h3>Licores</h3>
+        <div>
+            <p>
+                Millones de botellas de alcohol se venden cada día, multiplicando cifras durante los fines de semana. A mucha gente les
+                gusta disfrutar de un buen trago de su bebida favorita, nosotros tenemos: Jägermeister,Baileys,Khlibniy,Jack Daniels,
+                Absolut,Captain Morgan,Red Star Er Guo y Bagpiper United Spirits.
+               
+            </p>
+        </div>
+        <h3>Destilados</h3>
+        <div>
+            <p>
+               Pacharán. Con un descenso importante en el último año, Vodka. La eterna promesa,
+                Anís. Proporcionalmente es la familia de productos que más cae en ventas
+                Bourbon. Con un crecimiento continuado los últimos años
+                Aguardientes y orujos. Con un consumo estable los dos últimos años
+                Vermouths. No siendo propiamente un destilado
+                Ron. Sigue creciendo el consumo de ron oscuro
+                Brandy. En caída libre desde hace décadas
+                Ginebras. El producto con crecimientos estrella de la última década
+                Whisky. En sus diferentes versiones: nacional, blended escocés, malta, irlandés, etc.,
+                
+                En cuanto a otras categorías, aún minoritarias pero que han crecido de manera muy significativa durante 2016 se
+                encuentran, entre otras, el cognac, armagnac, grappa y calvados. Seguiremos atentos su evolución en futuros años.
+            </p>        
+        </div>
+        <h3>Vinos</h3>
+        <div>
+            <p>
+        Este año tenemos el top 10 de Wine Spectator está repartido entre los vinos estadounidenses (3), franceses (3), italianos (3)
+        sólo un vino español, como comentabamos con anterioridad ha podido introducirse en esta lista.
+        04. Rioja 890 Gran Reserva Selección Especial 2005
+        26. Valderiz Ribera del Duero 2015
+        29. Garnacha Aragón Breca Old Vines 2015
+        35. Pétalos del Bierzo 2016
+        37. Manzanilla Sanlúcar de Barrameda La Gitana 
+        41. Toro San Román 2014
+        47. Garnatxa Blanca Terra Alta Via Terra 2017 
+        59. Viña Tondonia Rioja White Viña Gravonia Crianza 2008
+            </p>
+        </div>
+    </div><br>
+    <h2>Listado de productos</h2>
+<button id="boton">Ver listado</button><br>
+    <list id="list">
+        <ul>
+<li>cervezas / cantidad: 24</li>
+<li>licores / cantidad: 56</li>
+<li>vinos / cantidad: 99</li>
+<li>destilados / cantidad: 122</li>
+<li>piscos / cantidad: 244</li>
+<li>Bourbon / cantidad: 154</li>
+        </ul>
+    </list>
+
+</center>
+</body>
+
+</html>

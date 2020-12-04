@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ingreso</title>
+  <link rel="stylesheet" href="style.css">
+  <script src='validacion.js'></script>
+</head>
+
+<body>
+
+  <div class="ingres">
+    <h1>Ingreso Usuario</h1>
+
+    <form name="form" onsubmit="return validacion()">
+      <label for="usuario">Usuario</label><br>
+      <input id="nombre" name="nombre" type="text"><br>
+
+      <br>
+
+      <label for="password">contraseña</label><br>
+      <input id="password" name="password" type="password"><br>
+      <br>
+
+
+    </form>
+    <button onclick="validacion()" type="submit" ref="#">Ingresar</button>
+  </div>
+
+</body>
+
+</html>

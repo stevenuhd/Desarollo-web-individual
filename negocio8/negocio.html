@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi negocio</title>
+    <script src='agventa'></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+
+<body>
+    <div class="negocio">
+
+
+        <h1>Mi bar ingles</h1>
+
+        <div>
+            <button id="despliega">Desplegar secciones</button>
+        </div>
+<h2>Historia de el bar ingles</h2>
+<div class="parte1">       
+        <p>En 1980 se creo el primer bar ingles de chile en la ciudad de valparaiso,<br>
+            fue el unico bar con permiso de bebidas alcoholicas importadas y fue fundada por Robert Marshall.</p>
+        
+            <div>
+                <a data-fancybox="gallery" href="https://pbs.twimg.com/media/CfE355QVAAEf3wI.jpg"><img src="https://pbs.twimg.com/media/CfE355QVAAEf3wI.jpg"></a>
+            </div>
+           
+</div>
+        <br>
+        <h2>Ubicacion y sucursales</h2>
+        <div class="parte2">  
+        <p>El bar esta ubicado en la calle errazuriz 300, valparaiso y tiene sucursal en santiago y concepcion.</p>
+        <div>
+           
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.317002698662!2d-71.62067485276066!3d-33.04521323303212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0d5d6d4f571%3A0xea85fdb51dc6dd15!2zRXJyw6F6dXJpeiwgVmFscGFyYcOtc28!5e0!3m2!1ses-419!2scl!4v1606926149532!5m2!1ses-419!2scl" 
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>"
+            
+        </div>
+            </div>
+        <br>
+        <h2>Productos a la venta</h2>
+        <div class="parte3">
+        <p>Productos importados desde europa.</p>
+        <img src="https://www.thespruceeats.com/thmb/BNMKJiHueV_Eh9n246pdEZM1Ijw=/3626x2418/filters:no_upscale():max_bytes(150000):strip_icc()/bar101-cocktails-504754220-580e83415f9b58564cf470b9.jpg"
+             alt="licores"><br>
+             <br>
+            <div>
+                <a id="video" class="boton" data-fancybox
+                    href="https://www.youtube.com/watch?v=5I8YqkB1sw0&ab_channel=SoyValpara%C3%ADso">
+                    <button id="video">Ver video bar ingles</button>
+                </a>
+            </div>
+
+        <h3>Lista de productos</h3>
+        <ol>
+            <li>
+                <p>Cervezas artesanales</p>
+            </li>
+            <li>
+                <p>Destilados de alemania y polonia</p>
+            </li>
+            <li>
+                <p>Licores de inglaterra y suecia</p>
+            </li>
+        </ol>
+        </div>
+        <br>
+        <h2>Referencias</h2>
+        <ul>
+            <li><a
+                    href="https://www.tripadvisor.cl/Restaurant_Review-g294306-d1063051-Reviews-Bar_Ingles-Valparaiso_Valparaiso_Region.html">Tripadvisor</a>
+            </li>
+            <li><a href="https://www.facebook.com/UKBarValparaiso/">Facebook Page</a></li>
+            <li><a
+                    href="https://theculturetrip.com/south-america/chile/articles/the-top-10-bars-in-cerro-concepci-n-valpara-so/">Ranking
+                    top bars</a></li>
+        </ul><br>
+        <a href="agregarcliente.html"><strong>Registro clientes</strong></a><br>
+        <a href="ingreso.html"><strong>Ingreso Usuario</strong></a>
+
+    </div>
+    <script>
+        $(document).ready(
+            function () {
+
+                $("p").click(
+                    function () {
+                        $(this).fadeOut(2000);
+                    }
+                );
+/*
+                 $("img").click(
+                    function () {
+                        $(this).fadeOut(2000);
+                    }
+                );
+*/
+                $("#despliega").click(
+                    function () {
+                        $("p").fadeIn(1000);
+                    }
+                );
+
+                 $("#despliega").click(
+                    function () {
+                        $("img").fadeIn(1000);
+                    }
+                );
+
+            }
+        );
+    </script>
+    <script>
+        $(document).ready(function () {
+                $(".fancybox").fancybox();
+            });
+
+            $(document).ready(function () {
+                $(".various").fancybox({
+                    maxWidth: 800,
+                    maxHeight: 600,
+                    fitToView: false,
+                    width: '70%',
+                    height: '70%',
+                    autoSize: false,
+                    closeClick: false,
+                    openEffect: 'elastic',
+                    closeEffect: 'none'
+                });
+            });
+            
+    </script>
+</body>
+
+</html>
