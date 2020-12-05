@@ -1,3 +1,9 @@
+// @autor: Esteban Perez Castillo 
+//   @versión: javascript
+//  @objetivos del archivo: Crear y agregar funcionalidad para el proyecto. (validacion de datos js)
+//
+
+
 function agventa(){
 
 var l1 = document.getElementById("idvent").value;
